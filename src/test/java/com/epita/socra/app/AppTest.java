@@ -27,6 +27,7 @@ public class AppTest {
         App app = new App(mock);
         app.run();
 
+        verify(mock).write(argThat(message -> message.contains("Arabic/Roman converter : Chose mode")));
         verify(mock).write(argThat(message -> message.contains("XLV")));
     }
 
@@ -39,6 +40,7 @@ public class AppTest {
         App app = new App(mock);
         app.run();
 
+        verify(mock).write(argThat(message -> message.contains("Arabic/Roman converter : Chose mode")));
         verify(mock).write(argThat(message -> message.contains("45")));
     }
 
@@ -53,6 +55,7 @@ public class AppTest {
         App app = new App(mock);
         app.run();
 
+        verify(mock).write(argThat(message -> message.contains("Arabic/Roman converter : Chose mode")));
         verify(mock).write(argThat(message -> message.contains("45")));
 
         verify(mock).write(argThat(message -> message.contains("XDV")));

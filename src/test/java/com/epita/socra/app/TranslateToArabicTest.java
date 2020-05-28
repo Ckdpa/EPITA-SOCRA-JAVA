@@ -1,31 +1,30 @@
 package com.epita.socra.app;
 
+import com.epita.socra.app.tools.Translater;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-
-import com.epita.socra.app.tools.ArabicTranslater;
-
-public class TranslateTest {
+public class TranslateToArabicTest {
     @Test
     public void given_XLII_returns42()
     {
-        assertEquals("42", ArabicTranslater.Translate("XLIII"));
+        String result = Translater.Translate("XLII");
+        assertEquals("42", result);
     }
     @Test
     public void given_X_returns10()
     {
-        assertEquals("10", ArabicTranslater.Translate("X"));
+        assertEquals("10", Translater.Translate("X"));
     }
     @Test
     public void given_LXXXIII_returns83()
     {
-        assertEquals("83", ArabicTranslater.Translate("LXXXIII"));
+        assertEquals("83", Translater.Translate("LXXXIII"));
     }
     @Test
     public void given_CMXCIX_returns999()
     {
-        assertEquals("999", ArabicTranslater.Translate("CMXCIX"));
+        assertEquals("999", Translater.Translate("CMXCIX"));
     }
 }
