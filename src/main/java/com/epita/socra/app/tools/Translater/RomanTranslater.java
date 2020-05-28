@@ -1,4 +1,6 @@
-package com.epita.socra.app.tools;
+package com.epita.socra.app.tools.Translater;
+
+import com.epita.socra.app.tools.Translater.Translater;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,7 +1,6 @@
 package com.epita.socra.app;
 
-import com.epita.socra.app.tools.ArabicTranslater;
-import com.epita.socra.app.tools.Translater;
+import com.epita.socra.app.tools.Translater.ArabicTranslater;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

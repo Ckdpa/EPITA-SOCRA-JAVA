@@ -1,6 +1,10 @@
 package com.epita.socra.app;
 
-import com.epita.socra.app.tools.*;
+import com.epita.socra.app.tools.Adapter.ConsoleAdapter;
+import com.epita.socra.app.tools.Adapter.IOAdapter;
+import com.epita.socra.app.tools.Translater.ArabicTranslater;
+import com.epita.socra.app.tools.Translater.RomanTranslater;
+import com.epita.socra.app.tools.Translater.Translater;
 
 /**
  * Hello world!

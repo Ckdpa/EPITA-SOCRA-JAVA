@@ -1,4 +1,4 @@
-package com.epita.socra.app.tools;
+package com.epita.socra.app.tools.Adapter;
 
 import java.util.Scanner;
 

@@ -1,9 +1,8 @@
-package com.epita.socra.app.tools;
+package com.epita.socra.app.tools.Translater;
 
-import java.util.Arrays;
-import java.util.List;
+import com.epita.socra.app.tools.Translater.Translater;
 
-public class ArabicTranslater implements  Translater{
+public class ArabicTranslater implements Translater {
 
     private int ArabicValue(char c){
         if (c == 'I'){
