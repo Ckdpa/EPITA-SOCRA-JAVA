@@ -21,12 +21,12 @@ public class AppTest {
     @Test
     public void givenAMock_WhenRunningMain_ThenCheckOuputs() {
         IOAdapter mock = mock(IOAdapter.class);
-        when(mock.read()).thenReturn("TEST");
+        when(mock.read()).thenReturn("Arabic");
         App app = new App(mock);
         app.run();
 
-        verify(mock).write("Hello, what's your name ?");
-        verify(mock).write(argThat(message -> message.contains("TEST")));
-
+        when (mock.read()).thenReturn("45");
+        verify(mock).write(argThat(message -> message.contains("XDV")));
+        when(mock.read()).thenReturn("stop");
     }
 }
