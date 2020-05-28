@@ -34,10 +34,9 @@ public final class App {
 
 
     public void run(){
-        adapter.write("Arabic/Roman converter : Chose mode");
-        String test = adapter.read();
+        adapter.write("Arabic/Roman converter : Choose mode");
         Translater Converter;
-        if (test.equals("Arabic")){
+        if (adapter.read().equals("Arabic")){
             Converter = new RomanTranslater();
         }
         else {
@@ -49,7 +48,8 @@ public final class App {
             if (input.equals("quit") || input.equals("EXIT")){
                break;
             }
-            adapter.write(Converter.Translate(input));
+            String output = Converter.Translate(input);
+            adapter.write(output);
         }
     }
 }
