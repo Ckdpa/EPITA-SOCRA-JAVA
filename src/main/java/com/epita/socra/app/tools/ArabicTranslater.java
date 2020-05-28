@@ -3,7 +3,7 @@ package com.epita.socra.app.tools;
 import java.util.Arrays;
 import java.util.List;
 
-public class ArabicTranslater {
+public class ArabicTranslater implements  Translater{
 
     private static int ArabicValue(char c){
         if (c == 'I'){
@@ -31,6 +31,7 @@ public class ArabicTranslater {
             return 0;
         }
     }
+
     public static String Translate(String roman) {
         int old_value = 0;
         int value = 0;

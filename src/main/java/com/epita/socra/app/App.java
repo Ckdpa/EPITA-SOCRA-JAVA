@@ -2,9 +2,6 @@ package com.epita.socra.app;
 
 import com.epita.socra.app.tools.*;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Hello world!
  */
@@ -42,12 +39,12 @@ public final class App {
                break;
             }
             if (test.equals("Arabic")) {
-                adapter.write(RomanTranslater.TranslateToRoman(input));
+                adapter.write(RomanTranslater.Translate(input));
             }
             else if (test.equals("Roman"))
             {
                 //TODO
-                adapter.write(ArabicTranslater.TranslateToArabic(input));
+                adapter.write(Translater.Translate(input));
             }
             else {
                 adapter.write("Unimplemented feature");

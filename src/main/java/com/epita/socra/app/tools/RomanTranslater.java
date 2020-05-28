@@ -20,7 +20,7 @@ public class RomanTranslater {
     }
 
     //gets input, returns translation
-    public static String TranslateToRoman(String input) {
+    public static String Translate(String input) {
         try {
             int number = Integer.parseInt(input);
             if (number > 3000){
