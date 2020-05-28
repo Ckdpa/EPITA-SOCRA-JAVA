@@ -25,15 +25,15 @@ public class TranslateToRomanTest {
     }
 
     @Test
-    public void given83_returnsX(){
+    public void given83_returnsLXXXIII(){
         assertEquals("LXXXIII", RomanTranslater.TranslateToRoman("83"));
     }
     @Test
-    public void given1903_returnsX(){
+    public void given1903_returnsMCMII(){
         assertEquals("MCMIII", RomanTranslater.TranslateToRoman("1903"));
     }
     @Test
-    public void given999_returnsX(){
+    public void given999_returnsCMXCIX(){
         assertEquals("CMXCIX", RomanTranslater.TranslateToRoman("999"));
     }
 }

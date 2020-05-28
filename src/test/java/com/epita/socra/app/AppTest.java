@@ -19,14 +19,42 @@ public class AppTest {
      * Rigorous Test.
      */
     @Test
-    public void givenAMock_WhenRunningMain_ThenCheckOuputs() {
+    public void givenAMock_WhenRunningMain_WithArabicInput_ThenCheckOuputs() {
         IOAdapter mock = mock(IOAdapter.class);
-        when(mock.read()).thenReturn("Arabic");
+        when(mock.read()).thenReturn("Arabic")
+            .thenReturn("45")
+            .thenReturn("quit");
         App app = new App(mock);
         app.run();
 
-        when (mock.read()).thenReturn("45");
+        verify(mock).write(argThat(message -> message.contains("XLV")));
+    }
+
+    @Test
+    public void givenAMock_WhenRunningMain_WithRomanInput_ThenCheckOuputs() {
+        IOAdapter mock = mock(IOAdapter.class);
+        when(mock.read()).thenReturn("Roman")
+            .thenReturn("XDV")
+            .thenReturn("quit");
+        App app = new App(mock);
+        app.run();
+
+        verify(mock).write(argThat(message -> message.contains("45")));
+    }
+
+    @Test
+    public void givenAMock_WhenRunningMain_WithRomanInput_ThenArabicInput_ThenCheckOuputs() {
+        IOAdapter mock = mock(IOAdapter.class);
+        when(mock.read()).thenReturn("Roman")
+            .thenReturn("XDV")
+            .thenReturn("Arabic")
+            .thenReturn("45")
+            .thenReturn("quit");
+        App app = new App(mock);
+        app.run();
+
+        verify(mock).write(argThat(message -> message.contains("45")));
+
         verify(mock).write(argThat(message -> message.contains("XDV")));
-        when(mock.read()).thenReturn("stop");
     }
 }
