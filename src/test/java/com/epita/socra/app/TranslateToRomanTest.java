@@ -15,25 +15,30 @@ public class TranslateToRomanTest {
 
     @Test
     public void given42_returnsXLII(){
-        assertEquals("XLII", RomanTranslater.Translate("42"));
+        RomanTranslater test = new RomanTranslater();
+        assertEquals("XLII", test.Translate("42"));
     }
 
     //test 10, 83, 1903, 999, 2999
     @Test
-    public void given10_returnsX(){
-        assertEquals("X", RomanTranslater.Translate("10"));
+    public void given10_returnsX() {
+        RomanTranslater test = new RomanTranslater();
+        assertEquals("X", test.Translate("10"));
     }
 
     @Test
     public void given83_returnsLXXXIII(){
-        assertEquals("LXXXIII", RomanTranslater.Translate("83"));
+        RomanTranslater test = new RomanTranslater();
+        assertEquals("LXXXIII", test.Translate("83"));
     }
     @Test
     public void given1903_returnsMCMII(){
-        assertEquals("MCMIII", RomanTranslater.Translate("1903"));
+        RomanTranslater test = new RomanTranslater();
+        assertEquals("MCMIII", test.Translate("1903"));
     }
     @Test
     public void given999_returnsCMXCIX(){
-        assertEquals("CMXCIX", RomanTranslater.Translate("999"));
+        RomanTranslater test = new RomanTranslater();
+        assertEquals("CMXCIX", test.Translate("999"));
     }
 }

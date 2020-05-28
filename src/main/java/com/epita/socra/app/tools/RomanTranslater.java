@@ -3,8 +3,8 @@ package com.epita.socra.app.tools;
 import java.util.Arrays;
 import java.util.List;
 
-public class RomanTranslater {
-    private static String toRoman(int decimal){
+public class RomanTranslater implements Translater {
+    private String toRoman(int decimal){
         List<String> m = Arrays.asList("","M", "MM", "MMM");
         List<String> c = Arrays.asList("","C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM");
         List<String> d = Arrays.asList("","X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC");
@@ -20,7 +20,7 @@ public class RomanTranslater {
     }
 
     //gets input, returns translation
-    public static String Translate(String input) {
+    public String Translate(String input) {
         try {
             int number = Integer.parseInt(input);
             if (number > 3000){

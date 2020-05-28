@@ -32,32 +32,15 @@ public class AppTest {
     }
 
     @Test
-    public void givenAMock_WhenRunningMain_WithRomanInput_ThenCheckOuputs() {
+    public void givenAMock_WhenRunningMain_WithRomanInputXDV_ThenCheckOuputs() {
         IOAdapter mock = mock(IOAdapter.class);
         when(mock.read()).thenReturn("Roman")
-            .thenReturn("XDV")
+            .thenReturn("XLV")
             .thenReturn("quit");
         App app = new App(mock);
         app.run();
 
         verify(mock).write(argThat(message -> message.contains("Arabic/Roman converter : Chose mode")));
         verify(mock).write(argThat(message -> message.contains("45")));
-    }
-
-    @Test
-    public void givenAMock_WhenRunningMain_WithRomanInput_ThenArabicInput_ThenCheckOuputs() {
-        IOAdapter mock = mock(IOAdapter.class);
-        when(mock.read()).thenReturn("Roman")
-            .thenReturn("XDV")
-            .thenReturn("Arabic")
-            .thenReturn("45")
-            .thenReturn("quit");
-        App app = new App(mock);
-        app.run();
-
-        verify(mock).write(argThat(message -> message.contains("Arabic/Roman converter : Chose mode")));
-        verify(mock).write(argThat(message -> message.contains("45")));
-
-        verify(mock).write(argThat(message -> message.contains("XDV")));
     }
 }

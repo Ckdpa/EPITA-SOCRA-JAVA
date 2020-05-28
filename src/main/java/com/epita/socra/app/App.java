@@ -32,24 +32,20 @@ public final class App {
     public void run(){
         adapter.write("Arabic/Roman converter : Chose mode");
         String test = adapter.read();
+        Translater Converter;
+        if (test.equals("Arabic")){
+            Converter = new RomanTranslater();
+        }
+        else {
+            Converter = new ArabicTranslater();
+        }
         while (true)
         {
             String input = adapter.read();
             if (input.equals("quit") || input.equals("EXIT")){
                break;
             }
-            if (test.equals("Arabic")) {
-                adapter.write(RomanTranslater.Translate(input));
-            }
-            else if (test.equals("Roman"))
-            {
-                //TODO
-                adapter.write(Translater.Translate(input));
-            }
-            else {
-                adapter.write("Unimplemented feature");
-                break;
-            }
+            adapter.write(Converter.Translate(input));
         }
     }
 }

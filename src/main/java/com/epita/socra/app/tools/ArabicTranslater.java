@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ArabicTranslater implements  Translater{
 
-    private static int ArabicValue(char c){
+    private int ArabicValue(char c){
         if (c == 'I'){
             return 1;
         }
@@ -32,7 +32,7 @@ public class ArabicTranslater implements  Translater{
         }
     }
 
-    public static String Translate(String roman) {
+    public String Translate(String roman) {
         int old_value = 0;
         int value = 0;
 
